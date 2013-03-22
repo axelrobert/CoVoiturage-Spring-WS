@@ -1,5 +1,8 @@
 package iaws.covoiturage.services.impl;
 
+import com.fourspaces.couchdb.Database;
+import com.fourspaces.couchdb.Session;
+
 import iaws.covoiturage.services.CoVoiturageInscriptionService;
 
 /**
@@ -14,6 +17,9 @@ public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscription
 
 	private String addPersonnel(String nom, String prenom, String mail,
 			String adresse) {
+		/*Session s = new Session("localhost",5984);
+		Database db = s.getDatabase("covoituragedb");*/
+		
 		return null;
 	}
 

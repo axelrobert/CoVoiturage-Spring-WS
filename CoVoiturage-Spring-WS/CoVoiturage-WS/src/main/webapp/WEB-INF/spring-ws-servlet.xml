@@ -6,6 +6,12 @@
        http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services-2.0.xsd">
 
     <sws:annotation-driven/>
-
+	
+	<bean id="covoiturageEndPoint"
+          class="iaws.covoiturage.ws.contractfirst.CoVoiturageEndpoint">
+        <constructor-arg name="covoiturageInscriptionService" ref="covoiturageInscriptionService"/>
+    </bean>
+    <bean id="covoiturageInscriptionService"
+          class="iaws.covoiturage.services.impl.CoVoiturageInscriptionServiceImpl"/>
 
 </beans>
