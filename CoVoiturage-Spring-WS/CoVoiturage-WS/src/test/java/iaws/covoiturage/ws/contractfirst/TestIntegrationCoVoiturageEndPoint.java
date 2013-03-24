@@ -32,8 +32,8 @@ public class TestIntegrationCoVoiturageEndPoint {
 
     @Test
     public void releveNotesEndpoint() throws Exception {
-        Source requestPayload = new StreamSource(new ClassPathResource("ReleveNotesRequest.xml").getInputStream() );
-        Source responsePayload = new StreamSource(new ClassPathResource("ReleveNotes.xml").getInputStream());
+        Source requestPayload = new StreamSource(new ClassPathResource("CoVoiturageRequest.xml").getInputStream() );
+        Source responsePayload = new StreamSource(new ClassPathResource("Covoiturage.xml").getInputStream());
 
         mockClient.sendRequest(withPayload(requestPayload)).
                 andExpect(payload(responsePayload));
