@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iaws/ws/contractfirst/exemple" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="CoVoiturage" type="exem:CoVoiturageType" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+
+    <xs:complexType name="personnelType">
+		<xs:all>
+			<xs:element type="xs:string" name="nom" />
+			<xs:element type="xs:string" name="prenom" />
+			<xs:element name="mail" >
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="([A-Za-z0-9.])+@univ-tlse3\.fr" />
+				</xs:restriction>
+	        </xs:simpleType>
+	        </xs:element>
+			<xs:element type="xs:string" name="adresse" />
+		</xs:all>
+		<xs:attribute type="xs:int" name="id" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="coordonneesType">
+		<xs:all>
+			<xs:element type="xs:decimal" name="latitude" />
+			<xs:element type="xs:decimal" name="longitude" />
+		</xs:all>
+		<xs:attribute type="xs:int" name="id" use="required" />
+		<xs:attribute type="xs:int" name="id_personnel" use="required"/>
+	</xs:complexType>
+
+    <xs:complexType name="CoVoiturageType">
+    <xs:sequence>
+      <xs:element type="exem:personnelType" name="personnel" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+      <xs:element type="exem:coordonneesType" name="coordonnees" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+    </xs:sequence>
+  </xs:complexType>
+
+    <xs:element name="CoVoiturageRequest" type="exem:CoVoiturageRequestType" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+
+    <xs:complexType name="CoVoiturageRequestType">
+        <xs:all>
+            <xs:element type="xs:string" name="nom" />
+			<xs:element type="xs:string" name="prenom" />
+			<xs:element name="mail" >
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="([A-Za-z0-9.])+@univ-tlse3\.fr" />
+				</xs:restriction>
+	        </xs:simpleType>
+	        </xs:element>
+			<xs:element type="xs:string" name="adresse" />
+        </xs:all>
+    </xs:complexType>
+</xs:schema>

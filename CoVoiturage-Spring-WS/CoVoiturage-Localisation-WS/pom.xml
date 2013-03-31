@@ -7,37 +7,21 @@
     <artifactId>CoVoiturage-Spring-WS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-
-  <artifactId>CoVoiturage-Inscription-WS</artifactId>
-
+  <groupId>Iaws</groupId>
+  <artifactId>CoVoiturage-Localisation-WS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>CoVoiturage-Inscription-WS Spring-WS Application</name>
+  <name>CoVoiturage-Localisation-WS Spring-WS Application</name>
   <url>http://www.springframework.org/spring-ws</url>
   <dependencies>
-        <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>Iaws</groupId>
-            <artifactId>CoVoiturage</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-		    <groupId>log4j</groupId>
-		    <artifactId>log4j</artifactId>
-		    <version>1.2.17</version>
-		</dependency>
-    </dependencies>
+    <dependency>
+      <groupId>org.springframework.ws</groupId>
+      <artifactId>spring-ws-core</artifactId>
+      <version>2.1.2.RELEASE</version>
+    </dependency>
+  </dependencies>
   <build>
-    <finalName>CoVoiturage-Inscription-WS</finalName>
+    <finalName>CoVoiturage-Localisation-WS</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

@@ -10,6 +10,7 @@
     <module>CoVoiturage-WS</module>
     <module>CoVoiturageClient</module>
     <module>CoVoiturage</module>
+    <module>CoVoiturage-Localisation-WS</module>
   </modules>
   
   <dependencyManagement>

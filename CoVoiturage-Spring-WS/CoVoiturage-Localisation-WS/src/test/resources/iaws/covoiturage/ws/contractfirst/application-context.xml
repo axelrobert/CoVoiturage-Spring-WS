@@ -7,10 +7,10 @@
 
     <sws:annotation-driven/>
 
-    <bean id="covoiturageInscriptionEndPoint"
-          class="iaws.covoiturage.ws.contractfirst.CoVoiturageInscriptionEndpoint">
-        <constructor-arg name="coVoiturageInscriptionService" ref="coVoiturageInscriptionService"/>
+    <bean id="covoiturageLocalisationEndPoint"
+          class="iaws.covoiturage.ws.contractfirst.CoVoiturageLocalisationEndpoint">
+        <constructor-arg name="coVoiturageLocalisationService" ref="coVoiturageLocalisationService"/>
     </bean>
-    <bean id="coVoiturageInscriptionService" class="iaws.covoiturage.services.impl.CoVoiturageInscriptionServiceImpl"/>
+    <bean id="coVoiturageLocalisationService" class="iaws.covoiturage.services.impl.CoVoiturageLocalisationServiceImpl"/>
 
 </beans>

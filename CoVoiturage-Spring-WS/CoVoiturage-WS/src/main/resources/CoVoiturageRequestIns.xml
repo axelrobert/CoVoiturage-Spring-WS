@@ -1,0 +1,7 @@
+<CoVoiturageRequestIns xmlns="http://iaws/ws/contractfirst/inscription" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://iaws/ws/contractfirst/inscription CoVoiturageIns.xsd">
+    <nom>Dupond</nom>
+	<prenom>Jean</prenom>
+	<mail>jean.dupond@univ-tlse3.fr</mail>
+	<adresse>rue du taur, toulouse</adresse>
+</CoVoiturageRequestIns>

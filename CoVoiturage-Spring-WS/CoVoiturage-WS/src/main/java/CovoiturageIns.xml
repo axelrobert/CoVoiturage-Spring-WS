@@ -1,0 +1,13 @@
+<CoVoiturage xmlns="http://iaws/ws/contractfirst/inscription" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://iaws/ws/contractfirst/inscription ../resources/CoVoiturageIns.xsd">
+	<personnel>
+		<nom>Dupond</nom>
+		<prenom>Jean</prenom>
+		<mail>jean.dupond@univ-tlse3.fr</mail>
+		<adresse>rue du taur, toulouse</adresse>
+	</personnel>
+	<coordonnees>
+		<latitude>43.606426</latitude>
+		<longitude>1.4424711</longitude>
+	</coordonnees>
+</CoVoiturage>

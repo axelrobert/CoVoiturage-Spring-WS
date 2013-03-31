@@ -1,0 +1,13 @@
+<CoVoiturage xmlns="http://iaws/ws/contractfirst/exemple" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://iaws/ws/contractfirst/exemple CoVoiturage.xsd">
+	<personnel id="235">
+		<nom>Dupond</nom>
+		<prenom>Jean</prenom>
+		<mail>jean.dupond@univ-tlse3.fr</mail>
+		<adresse>15 rue de taur</adresse>
+	</personnel>
+	<coordonnees id="44" id_personnel="235">
+		<latitude>214.45</latitude>
+		<longitude>2187.78</longitude>
+	</coordonnees>
+</CoVoiturage>

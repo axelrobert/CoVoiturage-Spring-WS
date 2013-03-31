@@ -1,34 +1,65 @@
 package iaws.covoiturage.ws.contractfirst;
 
-import java.io.IOException;
+import iaws.covoiturage.domain.Coordonnee;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.Namespace;
 
-import org.springframework.core.io.ClassPathResource;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.xml.sax.SAXException;
 
 /**
- * @author franck Silvestre
+ * @author Axel Robert
  */
 public class XmlHelper {
 	/**
-     * Return he dom root element of an xml file
-     * @param filePathInClassPath  the file path relative to the classpath
-     * @return  the root element
-     * @throws ParserConfigurationException
-     * @throws IOException
-     * @throws SAXException
+     * Return the root Element which contains all parameters 
+     * @param coord Coordonnees de l'adresse
+     * @param nom Nom du personnel
+     * @param prenom Prenom du personnel
+     * @param mail Email du personnel
+     * @return  the root Element
      */
-    public static Element getRootElementFromFileInClasspath(String filePathInClassPath) throws ParserConfigurationException, IOException, SAXException {
+    /*public static Element getRootElementFromFileInClasspath(String filePathInClassPath) throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 
         // root elements
         Document doc = docBuilder.parse(new ClassPathResource(filePathInClassPath).getInputStream());
         return doc.getDocumentElement();
+    }*/
+    
+    public static Element getResultsInXml(Coordonnee coord, String nom, String prenom, String mail, String adresse) {
+        //Nous allons commencer notre arborescence en créant la racine XML
+   		//qui sera ici "personnes".
+   		Element racine = new Element("CoVoiturage");
+   		racine.setNamespace(Namespace.getNamespace("http://iaws/ws/contractfirst/inscription"));
+   		Namespace XSI = Namespace.getNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+   		racine.addNamespaceDeclaration(XSI);
+   		racine.setAttribute("schemaLocation", "http://iaws/ws/contractfirst/inscription ../resources/CoVoiturageIns.xsd", XSI);
+   		Document doc = new Document(racine);
+   		Element personnel = new Element("personnel","http://iaws/ws/contractfirst/inscription");
+        racine.addContent(personnel);
+        Element familyname = new Element("nom","http://iaws/ws/contractfirst/inscription");
+        familyname.setText(nom);
+        Element firstname = new Element("prenom","http://iaws/ws/contractfirst/inscription");
+        firstname.setText(prenom);
+        Element email = new Element("mail","http://iaws/ws/contractfirst/inscription");
+        email.setText(mail);
+        Element adr = new Element("adresse","http://iaws/ws/contractfirst/inscription");
+        adr.setText(adresse);
+        personnel.addContent(familyname);
+        personnel.addContent(firstname);
+        personnel.addContent(email);
+        personnel.addContent(adr);
+        Element coordonnees = new Element("coordonnees","http://iaws/ws/contractfirst/inscription");
+        racine.addContent(coordonnees);
+        Element lat = new Element("latitude","http://iaws/ws/contractfirst/inscription");
+        lat.setText(Float.toString(coord.getLatitude()));
+        Element lon = new Element("longitude","http://iaws/ws/contractfirst/inscription");
+        lon.setText(Float.toString(coord.getLongitude()));
+        coordonnees.addContent(lat);
+        coordonnees.addContent(lon);
+        
+        return doc.getRootElement();
     }
 }

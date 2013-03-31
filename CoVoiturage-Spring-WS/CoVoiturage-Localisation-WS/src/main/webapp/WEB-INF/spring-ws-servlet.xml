@@ -6,18 +6,19 @@
        http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services-2.0.xsd">
 
     <sws:annotation-driven/>
-    
-    <sws:dynamic-wsdl id="coVoiturage"
-                      portTypeName="CoVoituragePort"
-                      locationUri="/covoiturageInscriptionService/"
-                      targetNamespace="http://iaws/ws/contractfirst/inscription">
-        <sws:xsd location="/WEB-INF/xsd/CoVoiturageIns.xsd"/>
-    </sws:dynamic-wsdl>
 	
-	<bean id="covoiturageInscriptionEndPoint"
-          class="iaws.covoiturage.ws.contractfirst.CoVoiturageInscriptionEndpoint">
-        <constructor-arg name="coVoiturageInscriptionService" ref="coVoiturageInscriptionService"/>
+	<sws:dynamic-wsdl id="coVoiturage"
+                      portTypeName="CoVoituragePort"
+                      locationUri="/covoiturageLocalisationService/"
+                      targetNamespace="http://iaws/ws/contractfirst/localisation">
+        <sws:xsd location="/WEB-INF/xsd/CoVoiturageLoc.xsd"/>
+    </sws:dynamic-wsdl>
+    
+    <bean id="covoiturageLocalisationEndPoint"
+          class="iaws.covoiturage.ws.contractfirst.CoVoiturageLocalisationEndpoint">
+        <constructor-arg name="coVoiturageLocalisationService" ref="coVoiturageLocalisationService"/>
     </bean>
-    <bean id="coVoiturageInscriptionService" class="iaws.covoiturage.services.impl.CoVoiturageInscriptionServiceImpl"/>
+    <bean id="coVoiturageLocalisationService" class="iaws.covoiturage.services.impl.CoVoiturageLocalisationServiceImpl"/>
+    
 
 </beans>
