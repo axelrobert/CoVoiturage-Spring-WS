@@ -1,5 +1,5 @@
-<CoVoiturageRequest xmlns="http://iaws/ws/contractfirst/localisation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<CoVoiturageRequestLoc xmlns="http://iaws/ws/contractfirst/localisation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://iaws/ws/contractfirst/localisation CoVoiturageLoc.xsd">
     <userid>09575b0279885bb7fcf9c694090007c1</userid>
     <rayonvoisinage>10</rayonvoisinage>
-</CoVoiturageRequest>
+</CoVoiturageRequestLoc>

@@ -84,7 +84,7 @@ public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscription
 		adr = adr.replaceAll("[ìíîï]","i");
 		adr = adr.replaceAll("[ùúûü]","u");
 		adr = adr.replaceAll("[ç]","c");
-		String url = "http://nominatim.openstreetmap.org/search?q="+ adr + "&format=xml";
+		String url = "http://nominatim.openstreetmap.org/search?q="+ adr + "&format=xml&limit=1";
 
 		//On crée une instance de SAXBuilder
 	      final SAXBuilder sxb = new SAXBuilder();

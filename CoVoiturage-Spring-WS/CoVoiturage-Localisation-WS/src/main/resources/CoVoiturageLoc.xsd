@@ -21,25 +21,16 @@
 	
     <xs:complexType name="CoVoiturageType">
     <xs:sequence>
-      <xs:element type="exem:personnelType" name="personnel" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
-      <xs:element type="exem:coordonneesType" name="coordonnees" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+      <xs:element type="exem:personnelType" name="personnel" xmlns:exem="http://iaws/ws/contractfirst/localisation"/>
     </xs:sequence>
   </xs:complexType>
 
-    <xs:element name="CoVoiturageRequest" type="exem:CoVoiturageRequestType" xmlns:exem="http://iaws/ws/contractfirst/exemple"/>
+    <xs:element name="CoVoiturageRequestLoc" type="exem:CoVoiturageRequestType" xmlns:exem="http://iaws/ws/contractfirst/localisation"/>
 
     <xs:complexType name="CoVoiturageRequestType">
         <xs:all>
-            <xs:element type="xs:string" name="nom" />
-			<xs:element type="xs:string" name="prenom" />
-			<xs:element name="mail" >
-			<xs:simpleType>
-				<xs:restriction base="xs:string">
-					<xs:pattern value="([A-Za-z0-9.])+@univ-tlse3\.fr" />
-				</xs:restriction>
-	        </xs:simpleType>
-	        </xs:element>
-			<xs:element type="xs:string" name="adresse" />
+            <xs:element type="xs:string" name="userid" />
+			<xs:element type="xs:double" name="rayonvoisinage" />
         </xs:all>
     </xs:complexType>
 </xs:schema>

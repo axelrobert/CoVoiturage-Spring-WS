@@ -42,19 +42,21 @@ public class CoVoiturageInscriptionEndpoint {
         String prenom = new String(prenomP);
         String mail = new String(mailP);
         String adresse = new String(adresseP);
-        
-     // invoque le service "CoVoiturageInscriptionService" pour inscrire un personnel
-     String resultat = coVoiturageInscriptionService.inscrirePersonnel(nom, prenom, mail, adresse);
-     logger.info(resultat);
-     
-     // construit le xml résultat
-     CoVoiturageInscriptionServiceImpl impl = new CoVoiturageInscriptionServiceImpl();
-     Coordonnee coord = impl.getLatitudeAndLongitude(adresse);
-     Element elt = null;
-     if(coord != null)
-     	elt = XmlHelper.getResultsInXml(coord, nom, prenom, mail, adresse);
-     
-     
-     return  elt;
+	        
+	     // invoque le service "CoVoiturageInscriptionService" pour inscrire un personnel
+	     String resultat = coVoiturageInscriptionService.inscrirePersonnel(nom, prenom, mail, adresse);
+	     
+	     // construit le xml résultat
+	     CoVoiturageInscriptionServiceImpl impl = new CoVoiturageInscriptionServiceImpl();
+	     Coordonnee coord = impl.getLatitudeAndLongitude(adresse);
+	     Element elt = null;
+	     if(resultat.equals("OK")) {
+		     if(coord != null)
+		     	elt = XmlHelper.getResultsInXml(coord, nom, prenom, mail, adresse);
+	     } else {
+	    	 logger.error(resultat);
+	     }
+	     
+	     return  elt;
 	}
 }

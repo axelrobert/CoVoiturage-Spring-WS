@@ -19,15 +19,6 @@ public class XmlHelper {
      * @param mail Email du personnel
      * @return  the root Element
      */
-    /*public static Element getRootElementFromFileInClasspath(String filePathInClassPath) throws ParserConfigurationException, IOException, SAXException {
-        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-
-        // root elements
-        Document doc = docBuilder.parse(new ClassPathResource(filePathInClassPath).getInputStream());
-        return doc.getDocumentElement();
-    }*/
-    
     public static Element getResultsInXml(Coordonnee coord, String nom, String prenom, String mail, String adresse) {
         //Nous allons commencer notre arborescence en créant la racine XML
    		//qui sera ici "personnes".

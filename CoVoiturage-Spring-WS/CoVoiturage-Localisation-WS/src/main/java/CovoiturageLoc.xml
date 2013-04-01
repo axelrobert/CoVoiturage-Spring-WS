@@ -1,5 +1,5 @@
 <CoVoiturage xmlns="http://iaws/ws/contractfirst/localisation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://iaws/ws/contractfirst/localisation CoVoiturageLoc.xsd">
+xsi:schemaLocation="http://iaws/ws/contractfirst/localisation ../resources/CoVoiturageLoc.xsd">
 	<personnel>
 		<nom>Dupond</nom>
 		<prenom>Jean</prenom>

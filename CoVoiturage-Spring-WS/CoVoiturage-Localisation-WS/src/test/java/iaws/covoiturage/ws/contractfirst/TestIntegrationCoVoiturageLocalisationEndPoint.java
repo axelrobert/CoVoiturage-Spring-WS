@@ -18,7 +18,7 @@ import org.springframework.ws.test.server.MockWebServiceClient;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("application-context.xml")
-public class TestIntegrationCoVoiturageInscriptionEndPoint {
+public class TestIntegrationCoVoiturageLocalisationEndPoint {
 	
 	@Autowired
     private ApplicationContext applicationContext;
@@ -31,9 +31,9 @@ public class TestIntegrationCoVoiturageInscriptionEndPoint {
     }
 
     @Test
-    public void coVoiturageInscriptionEndpoint() throws Exception {
-        Source requestPayload = new StreamSource(new ClassPathResource("CoVoiturageRequestIns.xml").getInputStream() );
-        Source responsePayload = new StreamSource(new ClassPathResource("CovoiturageIns.xml").getInputStream());
+    public void coVoiturageLocalisationEndpoint() throws Exception {
+        Source requestPayload = new StreamSource(new ClassPathResource("CoVoiturageRequestLoc.xml").getInputStream() );
+        Source responsePayload = new StreamSource(new ClassPathResource("CovoiturageLoc.xml").getInputStream());
 
         mockClient.sendRequest(withPayload(requestPayload)).
                 andExpect(payload(responsePayload));
