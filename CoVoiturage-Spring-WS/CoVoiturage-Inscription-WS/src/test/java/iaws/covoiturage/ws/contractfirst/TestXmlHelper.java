@@ -8,6 +8,9 @@ import org.junit.Test;
 import iaws.covoiturage.domain.Coordonnee;
 import iaws.covoiturage.ws.contractfirst.XmlHelper;
 
+/**
+ * @author Axel Robert, Valentin Boutonné
+ */
 public class TestXmlHelper {
 	private static final String nom = "nom";
 	private static final String prenom = "prenom";

@@ -1,7 +1,7 @@
 package iaws.covoiturage.services;
 
 /**
- * @author Axel robert
+ * @author Axel Robert, Valentin Boutonné
  */
 public interface CoVoiturageInscriptionService {
 	public String inscrirePersonnel(

@@ -14,7 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import org.springframework.ws.server.endpoint.annotation.XPathParam;
 
 /**
- * @author Axel Robert
+ * @author Axel Robert, Valentin Boutonné
  */
 @Endpoint
 public class CoVoiturageLocalisationEndPoint {

@@ -10,6 +10,9 @@ import com.fourspaces.couchdb.ViewResults;
 import iaws.covoiturage.domain.Personnel;
 import iaws.covoiturage.services.CoVoiturageLocalisationService;
 
+/**
+ * @author Axel Robert, Valentin Boutonné
+ */
 public class CoVoiturageLocalisationServiceImpl implements CoVoiturageLocalisationService{
 
 	public ArrayList<Personnel> localiserVoisins(String userid, Double rayonKm) {

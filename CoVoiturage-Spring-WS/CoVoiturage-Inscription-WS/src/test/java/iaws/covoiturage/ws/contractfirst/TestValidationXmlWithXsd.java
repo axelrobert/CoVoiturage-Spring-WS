@@ -14,6 +14,9 @@ import org.junit.Test;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+/**
+ * @author Axel Robert, Valentin Boutonné
+ */
 public class TestValidationXmlWithXsd {
 
 	@Test

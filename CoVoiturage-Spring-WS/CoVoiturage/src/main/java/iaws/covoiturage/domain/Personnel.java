@@ -1,7 +1,7 @@
 package iaws.covoiturage.domain;
 
 /**
- * @author Axel Robert
+ * @author Axel Robert, Valentin Boutonné
  */
 public class Personnel {
 	

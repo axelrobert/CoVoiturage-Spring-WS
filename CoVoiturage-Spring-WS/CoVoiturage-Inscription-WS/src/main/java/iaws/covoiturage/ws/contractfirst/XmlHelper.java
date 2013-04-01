@@ -8,7 +8,7 @@ import org.jdom2.Namespace;
 
 
 /**
- * @author Axel Robert
+ * @author Axel Robert, Valentin Boutonné
  */
 public class XmlHelper {
 	/**

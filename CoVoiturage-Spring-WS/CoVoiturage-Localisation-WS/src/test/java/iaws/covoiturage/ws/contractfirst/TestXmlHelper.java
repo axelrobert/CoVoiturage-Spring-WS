@@ -9,6 +9,9 @@ import iaws.covoiturage.domain.Personnel;
 import org.jdom2.Element;
 import org.junit.Test;
 
+/**
+ * @author Axel Robert, Valentin Boutonné
+ */
 public class TestXmlHelper {
 	private Personnel p1 = new Personnel();
 	private ArrayList<Personnel> liste = new ArrayList<Personnel>();

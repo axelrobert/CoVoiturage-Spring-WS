@@ -1,7 +1,7 @@
 package iaws.covoiturage.domain;
 
 /**
- * @author Axel robert
+ * @author Axel Robert, Valentin Boutonné
  */
 public class Coordonnee {
 	private int id;

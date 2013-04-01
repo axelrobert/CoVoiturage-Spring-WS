@@ -21,7 +21,7 @@ import iaws.covoiturage.domain.Coordonnee;
 import iaws.covoiturage.services.CoVoiturageInscriptionService;
 
 /**
- * @author Axel robert
+ * @author Axel Robert, Valentin Boutonné
  */
 public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscriptionService{
 	

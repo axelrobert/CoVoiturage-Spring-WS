@@ -1,5 +1,6 @@
 package iaws.covoiturage.ws.contractfirst;
 
+import iaws.covoiturage.config.loglvl.ResultLevel;
 import iaws.covoiturage.domain.Coordonnee;
 import iaws.covoiturage.services.CoVoiturageInscriptionService;
 import iaws.covoiturage.services.impl.CoVoiturageInscriptionServiceImpl;
@@ -15,7 +16,7 @@ import org.springframework.ws.server.endpoint.annotation.XPathParam;
 
 
 /**
- * @author Axel Robert
+ * @author Axel Robert, Valentin Boutonné
  */
 @Endpoint
 public class CoVoiturageInscriptionEndpoint {
@@ -54,7 +55,7 @@ public class CoVoiturageInscriptionEndpoint {
 		     if(coord != null)
 		     	elt = XmlHelper.getResultsInXml(coord, nom, prenom, mail, adresse);
 	     } else {
-	    	 logger.error(resultat);
+	    	 logger.log(ResultLevel.RESULT, resultat);
 	     }
 	     
 	     return  elt;
