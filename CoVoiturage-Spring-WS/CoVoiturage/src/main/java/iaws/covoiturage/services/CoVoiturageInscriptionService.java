@@ -1,5 +1,7 @@
 package iaws.covoiturage.services;
 
+import java.io.IOException;
+
 /**
  * @author Axel Robert, Valentin Boutonné
  */
@@ -9,5 +11,5 @@ public interface CoVoiturageInscriptionService {
             String prenom,
             String mail,
             String adresse
-    );
+    ); 
 }

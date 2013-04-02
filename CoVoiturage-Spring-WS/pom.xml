@@ -7,8 +7,7 @@
   <packaging>pom</packaging>
   <name>CoVoiturage-Spring-WS</name>
   <modules>
-    <module>CoVoiturage-WS</module>
-    <module>CoVoiturageClient</module>
+    <module>CoVoiturage-Inscription-WS</module>
     <module>CoVoiturage</module>
     <module>CoVoiturage-Localisation-WS</module>
   </modules>

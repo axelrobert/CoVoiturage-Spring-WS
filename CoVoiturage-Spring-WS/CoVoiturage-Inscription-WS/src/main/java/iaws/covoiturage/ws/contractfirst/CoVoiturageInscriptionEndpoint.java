@@ -52,6 +52,7 @@ public class CoVoiturageInscriptionEndpoint {
 	     Coordonnee coord = impl.getLatitudeAndLongitude(adresse);
 	     Element elt = null;
 	     if(resultat.equals("OK")) {
+	    	 logger.log(ResultLevel.RESULT, resultat);
 		     if(coord != null)
 		     	elt = XmlHelper.getResultsInXml(coord, nom, prenom, mail, adresse);
 	     } else {

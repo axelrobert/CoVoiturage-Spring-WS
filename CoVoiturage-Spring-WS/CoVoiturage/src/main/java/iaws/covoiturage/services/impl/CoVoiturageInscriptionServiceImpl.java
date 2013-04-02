@@ -39,7 +39,6 @@ public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscription
 		Session s = new Session("localhost",5984);
 		Database db = s.getDatabase("covoituragedb");
 		Document newEntry = new Document();
-		//Database db = new Database("localhost", "covoituragedb");
 		Coordonnee coord = getLatitudeAndLongitude(adresse);
 		if(coord == null){
 			return nok + "200 : Adresse postale non connue de Open Street Map";
@@ -52,9 +51,6 @@ public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscription
 		        	return nok + "100 : Adresse email déjà utilisée";
 		        }
 		}
-		/*ViewResult<Map> result = db.listDocuments(null, null);
-		List<ValueRow<Map>> res = result.getRows();
-		System.out.println(res.size());*/
 		if(!Pattern.matches("^[_A-Za-z0-9-.]+@univ-tlse3.fr$", mail)) {
 			return nok + "110 : Adresse email invalide";
 		}
@@ -65,14 +61,7 @@ public class CoVoiturageInscriptionServiceImpl implements CoVoiturageInscription
 		newEntry.put("latitude", coord.getLatitude());
 		newEntry.put("longitude", coord.getLongitude());
 		db.saveDocument(newEntry);
-		// create a hash map document with two fields    
-	    /*Map<String,String> doc = new LinkedHashMap<String, String>();
-	    doc.put("nom", nom);
-	    doc.put("mail", mail);
-		doc.put("adresse", adresse);
-		doc.put("latitude", Float.toString(coord.getLatitude()));
-		doc.put("longitude", Float.toString(coord.getLongitude()));
-	    db.createDocument(doc);*/
+		
 	    return ok;
 	}
 	
